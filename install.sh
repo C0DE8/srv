@@ -17,13 +17,12 @@ set -e
 # When using "su" an uncomplete PATH could be passed.
 export PATH+=':/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
 
-echo "#$1#"
-
 # config
 INSTALLER_VERSION="0.0.1"
 INSTALLER_DATE="2021-01-25"
 INSTALLER_TIME="11:30"
 INSTALLER_RELEASE_DATE="${INSTALLER_DATE} (${INSTALLER_TIME})"
+REPO_USER_NAME="$1"
 BASE_REPO_PATH="_srv-defaults"
 
 # functions
@@ -104,7 +103,7 @@ echo
 
 # clone main repository (bitbucket.org)
 echo -e "cloning main repository...\n"
-git clone https://bitbucket.org/beitsolutions/server-defaults.git "${BASE_REPO_PATH}"
+git clone "https://bitbucket.org/${REPO_USER_NAME}.git" "${BASE_REPO_PATH}"
 echo "cloning completed: $(checkResult "$?)"
 
 cd "${BASE_REPO_PATH}"
