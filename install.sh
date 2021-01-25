@@ -103,7 +103,7 @@ echo
 
 # clone main repository (bitbucket.org)
 echo -e "cloning main repository...\n"
-git clone "https://bitbucket.org/${REPO_USER_NAME}.git" "${BASE_REPO_PATH}"
+git clone https://bitbucket.org/${REPO_USER_NAME}.git "${BASE_REPO_PATH}"
 echo "cloning completed: $(checkResult "$?)"
 
 cd "${BASE_REPO_PATH}"
