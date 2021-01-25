@@ -40,7 +40,7 @@ else
 fi
 
 # installer title
-echo "${COL_CYAN}C0DE8 Server defaults Installer${COL_NC}\n"
+echo -e "${COL_CYAN}C0DE8 Server defaults Installer${COL_NC}\n"
 
 # clone main repository (bitbucket.org)
 git clone https://beitsolutions@bitbucket.org/beitsolutions/server-defaults.git "${BASE_REPO_PATH}"
