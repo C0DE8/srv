@@ -17,6 +17,8 @@ set -e
 # When using "su" an uncomplete PATH could be passed.
 export PATH+=':/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
 
+echo "#$1#"
+
 # config
 INSTALLER_VERSION="0.0.1"
 INSTALLER_DATE="2021-01-25"
