@@ -14,11 +14,14 @@
 set -e
 
 # Set PATH to a usual default to assure that all basic commands are available.
-# When using "su" an uncomplete PATH could be passed: https://github.com/pi-hole/pi-hole/issues/3209
+# When using "su" an uncomplete PATH could be passed.
 export PATH+=':/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
 
 # config
 BASE_REPO_PATH="_srv-defaults"
+
+# installer title
+echo "C0DE8 Server defaults Installer"
 
 # clone main repository (bitbucket.org)
 git clone https://beitsolutions@bitbucket.org/beitsolutions/server-defaults.git "${BASE_REPO_PATH}"
